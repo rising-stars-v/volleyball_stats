@@ -100,7 +100,13 @@ store/screenshots/ios/iphone-17/
 
 Animated preview:
 
-![Coach Score iOS tour](store/screenshots/coach-score-ios-tour.gif)
+![Coach Score iOS tour](store/screenshots/coach-score-ios-tour-large.gif)
+
+Demo recording:
+
+```text
+store/recordings/coach-score-ios-demo-captioned.mp4
+```
 
 These screenshots are meant as reusable source material for future App Store
 Connect and Google Play listings. Before final submission, regenerate screenshots

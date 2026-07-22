@@ -4,8 +4,9 @@ Draft screenshots for future store listings.
 
 ## Animated Preview
 
-`coach-score-ios-tour.gif` combines all six iPhone screenshots into a looping
-preview for README and planning use.
+`coach-score-ios-tour-large.gif` combines all six iPhone screenshots into a
+looping preview for README and planning use. The smaller
+`coach-score-ios-tour.gif` is kept as a lightweight fallback.
 
 ## iOS
 
