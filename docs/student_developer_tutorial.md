@@ -1,40 +1,67 @@
-# Coach Score Student Developer Tutorial
+# Coach Score Student HCI Tutorial
 
-This guide is for 8th grade students who want to understand the Coach Score app
-and learn how to contribute small new features.
+This guide is for 8th grade students who want to help improve Coach Score by
+thinking like product designers, user researchers, and human-computer
+interaction reviewers.
+
+You do not need to become an expert programmer first. In this project, students
+should focus on understanding the users, finding confusing moments, designing
+better interactions, and using AI to help with the coding.
+
+## What Is Coach Score?
 
 Coach Score is a Flutter app for volleyball coaches. During a match, a coach can
-pick a player, tap an action such as a serve or attack, and see a custom score
-summary later. The app works offline, so it does not need a server while a coach
-is using it.
+select a player, tap an action, and later review a custom score summary.
+
+The app is used in a fast, noisy, real-world environment:
+
+- A coach may be standing near the court.
+- They may only have one hand free.
+- They may need to tap quickly without looking for long.
+- They may make mistakes and need to undo them.
+- They may need to explain results after the match.
+
+That means the app is not just a coding project. It is an HCI project.
+
+## What Is HCI?
+
+HCI means Human-Computer Interaction. It asks questions like:
+
+- Who is using this app?
+- What are they trying to do?
+- What makes the task hard?
+- What information do they need first?
+- What buttons are easy or hard to tap?
+- What mistakes might happen?
+- How can the app help users recover from mistakes?
+
+Good HCI work makes software easier, faster, safer, and more pleasant to use.
 
 ## What You Will Learn
 
 By the end of this tutorial, you should be able to:
 
-- Run the app on your computer.
-- Explain the main folders in the project.
-- Follow how one volleyball action becomes part of a match summary.
-- Make a small feature change.
-- Run checks before sharing your work.
+- Describe the main users of Coach Score.
+- Watch someone use the app and notice usability problems.
+- Sketch a better screen or workflow.
+- Write a clear AI prompt for a small app change.
+- Review AI-generated code by testing the user experience.
+- Explain your contribution using HCI language.
 
-## Before You Start
+## The Student Role
 
-You need:
+Your main job is not to write lots of code by hand.
 
-- Flutter installed.
-- A code editor such as IntelliJ IDEA, Android Studio, or VS Code.
-- A terminal.
-- This project opened on your computer.
+Your main job is to:
 
-To check that Flutter is available, run:
+1. Understand the user.
+2. Find a real problem.
+3. Design a simple improvement.
+4. Ask AI to help implement it.
+5. Test whether the improvement actually helps.
 
-```sh
-flutter doctor
-```
-
-If Flutter is installed correctly, you should see a report from Flutter. Some
-warnings can be okay, but ask a mentor if you see errors you do not understand.
+AI can help write code, but AI does not automatically know what a coach needs
+during a volleyball match. That is where your HCI thinking matters.
 
 ## Run The App
 
@@ -50,204 +77,337 @@ Then run the app in Chrome:
 flutter run -d chrome
 ```
 
-Try these actions in the app:
+Try this short walkthrough:
 
-1. Open the roster and look at the players.
+1. Open the roster.
 2. Start or resume a match.
 3. Select a player.
-4. Tap a scoring action.
-5. Open the match summary.
+4. Tap a few scoring actions.
+5. Undo one action.
+6. Open the match summary.
 
-## Project Map
+As you try the app, do not only ask, "Does it work?" Also ask, "Was it easy?"
 
-Think of the project like a school building. Each folder has a job.
+## Project Map For Designers
+
+You do not need to understand every file. Start with the parts that connect to
+the user experience.
 
 ```text
-lib/
-  app/              App shell and shared app state
-  core/             Scoring summaries, CSV tools, and export logic
-  data/
-    models/         Player, rule, match, and event definitions
-    repositories/   Save/load interface and implementations
-    storage/        Browser and device storage
-  features/         App screens
-test/               Automated checks
-store/              Screenshots and recordings for store listings
-tooling/            Helper scripts
+lib/features/home/       Main entry screen
+lib/features/roster/     Player list and roster management
+lib/features/matches/    Start, resume, and finish matches
+lib/features/scoring/    Live scoring during a match
+lib/features/reports/    Match summaries and exports
+lib/app/app_state.dart   Shared app actions and app memory
+lib/core/                Calculations, CSV, and export helpers
+test/                    Automated checks
 ```
 
-The most useful files for a new contributor are:
+For HCI work, the most important folder is:
 
-- `lib/app/app_state.dart`: coordinates app actions such as adding players,
-  starting matches, recording events, and refreshing the screen.
-- `lib/core/match_summary.dart`: calculates scores from recorded match events.
-- `lib/features/scoring/scoring_screen.dart`: shows the live scoring screen.
-- `lib/features/reports/reports_screen.dart`: shows match summary information.
-- `test/core/match_summary_test.dart`: tests score summary behavior.
+```text
+lib/features/
+```
 
-## Important App Ideas
+That is where the screens live.
 
-### Player
+## The Main Users
 
-A player has a jersey number, a display name, and an active/inactive status.
+Before designing a feature, decide which user you are helping.
 
-Example: `#7 Jordan`
+### Assistant Coach
 
-### Rule Action
+The assistant coach records actions during a live match.
 
-A rule action is something the coach can tap during a match.
+They care about:
 
-Examples:
+- Fast taps
+- Large buttons
+- Few distractions
+- Easy undo
+- Clear player selection
+- Confidence that the event was recorded
 
-- Good serve: positive points
-- Attack error: negative points
-- Block: positive points
+### Head Coach
 
-### Match Event
+The head coach reviews the summary after a match.
 
-A match event is one recorded action during a match.
+They care about:
+
+- Which players performed well
+- Which actions happened most
+- Which set had problems
+- Simple export or sharing
+- Results that are easy to explain
+
+### Team Admin Or Parent Helper
+
+This person may help enter rosters or prepare information.
+
+They care about:
+
+- Clear forms
+- Helpful error messages
+- Easy CSV import
+- Not accidentally changing match history
+
+## HCI Observation Activity
+
+Pair up with another student.
+
+One student is the user. The other student is the observer.
+
+The user should complete this task:
+
+```text
+Start a match, record three actions for two players, undo one mistake, and find
+the match summary.
+```
+
+The observer should write down:
+
+- Where did the user pause?
+- What did the user tap first?
+- Did the user understand which player was selected?
+- Did the user notice if an action was recorded?
+- Was undo easy to find?
+- Did any label confuse the user?
+- Did the screen feel crowded?
+
+Important rule: do not explain the app while observing. Watch what happens
+naturally.
+
+## Usability Notes Template
+
+Use this format when you find a problem:
+
+```text
+User:
+Task:
+What happened:
+Why it matters:
+Possible improvement:
+How we can test it:
+```
 
 Example:
 
 ```text
-Jordan made a good serve in set 1, worth +2 points.
+User: Assistant coach
+Task: Record a serve for #7 Jordan
+What happened: The user tapped the action before noticing the wrong player was selected.
+Why it matters: During a real match, this could record points for the wrong player.
+Possible improvement: Make the selected player more obvious near the action buttons.
+How we can test it: Ask three students to record actions and see if they notice the selected player before tapping.
 ```
 
-The app saves raw events instead of only saving final totals. This is important
-because old matches should still make sense even if scoring rules change later.
+## Design Before Coding
 
-### Voided Event
+Before asking AI to code, make a small design plan.
 
-The app uses a void-based undo. That means a mistake is marked as voided instead
-of being deleted. Summary reports ignore voided events, but the original event
-history is still preserved.
+Answer these questions:
 
-## Follow One Feature: Recording A Score
+- Who is this change for?
+- What problem does it solve?
+- Where will the user see it?
+- What should happen when the user taps, types, or scrolls?
+- What mistake could the user make?
+- How will the app help the user recover?
+- How will we know the change worked?
 
-When a coach records a score, this is the path through the app:
+If you cannot answer these questions, the feature idea is not ready for coding
+yet.
 
-1. The coach selects a player on the scoring screen.
-2. The coach taps an action button.
-3. `scoring_screen.dart` calls `appState.recordEvent(...)`.
-4. `app_state.dart` asks the repository to save the event.
-5. The app refreshes the current match events.
-6. `match_summary.dart` calculates totals from events that are not voided.
-7. The report screen displays the updated summary.
+## Sketch The Idea
 
-This is a good pattern to remember:
+You can sketch on paper, a whiteboard, or a simple drawing tool.
+
+Your sketch should show:
+
+- The screen name.
+- The most important information.
+- The buttons or controls.
+- What changes after the user takes an action.
+- Any error or empty state.
+
+The sketch does not need to be beautiful. It needs to make the idea clear.
+
+## Good HCI Contribution Ideas
+
+Beginner ideas:
+
+- Make the selected player easier to see on the scoring screen.
+- Improve the empty message when there is no active match.
+- Rename a confusing button or label.
+- Add a clearer success message after importing a roster.
+- Make an error message explain how to fix the problem.
+
+Intermediate ideas:
+
+- Add a roster search or filter.
+- Add a "recently recorded" confirmation near the action buttons.
+- Improve the match summary layout so the most important numbers are first.
+- Add a safer confirmation step before finishing a match.
+- Make CSV import errors easier for a student manager to understand.
+
+Advanced ideas:
+
+- Design a better one-handed scoring layout.
+- Add a simple post-match coach review workflow.
+- Add a set-by-set comparison view.
+- Improve accessibility for larger text and screen readers.
+- Design a first-time user onboarding flow.
+
+## Using AI For Coding
+
+AI works best when you give it a clear HCI problem, not just a vague command.
+
+Weak prompt:
 
 ```text
-screen tap -> AppState method -> repository save/load -> summary calculation -> screen update
+Make the scoring screen better.
 ```
 
-## How To Make A Small Contribution
-
-Start with small, visible changes. Good first tasks include:
-
-- Rename a label to make it clearer.
-- Improve an empty message when there is no match.
-- Add a small number to a summary screen.
-- Add a test for score calculation.
-- Improve spacing or button text on one screen.
-
-Avoid big changes at first, such as changing the database, adding accounts, or
-adding cloud sync. Those are harder and can break more parts of the app.
-
-## First Practice Task: Add A Total Event Count
-
-Goal: show how many non-voided events are included in a match summary.
-
-This is a good beginner feature because it teaches data, loops, tests, and UI.
-
-### Step 1: Understand The Summary Code
-
-Open:
+Better prompt:
 
 ```text
-lib/core/match_summary.dart
+In this Flutter app, improve the live scoring screen for an assistant coach who
+needs to record actions quickly during a volleyball match. Make the currently
+selected player more obvious near the action buttons. Keep the change small and
+consistent with the existing Material design. After editing, run dart format,
+flutter analyze, and flutter test.
 ```
 
-Find the `MatchSummary` class. It stores the final numbers that reports can use.
-
-Find `MatchSummaryCalculator`. It loops through events and ignores events where:
-
-```dart
-event.isVoided
-```
-
-That means your total event count should count only events that are not voided.
-
-### Step 2: Add The Data
-
-Add a new field to `MatchSummary`:
-
-```dart
-final int totalEventCount;
-```
-
-Then update the constructor so it requires the new value:
-
-```dart
-required this.totalEventCount,
-```
-
-In `MatchSummaryCalculator.calculate`, create a counter:
-
-```dart
-var totalEventCount = 0;
-```
-
-Inside the loop for non-voided events, increase it:
-
-```dart
-totalEventCount += 1;
-```
-
-When returning `MatchSummary`, include:
-
-```dart
-totalEventCount: totalEventCount,
-```
-
-### Step 3: Add Or Update A Test
-
-Open:
+Best prompt:
 
 ```text
-test/core/match_summary_test.dart
+We observed that users sometimes tap an action before noticing the wrong player
+is selected. In lib/features/scoring/scoring_screen.dart, add a compact selected
+player banner above the action buttons on the mobile scoring layout. The banner
+should show jersey number, player name, and current player score. Keep it easy to
+read with one hand during a match. Do not change storage or scoring rules. Add or
+update tests only if existing tests cover this screen. Run dart format, flutter
+analyze, and flutter test.
 ```
 
-Add a test that checks:
+Notice what the best prompt includes:
 
-- Normal events are counted.
-- Voided events are not counted.
+- The user
+- The observed problem
+- The file or screen
+- The expected design
+- What not to change
+- How to verify the work
 
-The important idea is:
+## AI Prompt Template
+
+Copy this template when asking AI to help:
 
 ```text
-If there are 3 events and 1 is voided, totalEventCount should be 2.
+Project: Coach Score Flutter app
+
+User:
+
+Observed problem:
+
+Screen or workflow:
+
+Design goal:
+
+Constraints:
+- Keep the change small.
+- Match the existing app style.
+- Do not change unrelated features.
+- Do not change storage unless required.
+
+Files to inspect first:
+
+Acceptance criteria:
+- 
+- 
+- 
+
+Verification:
+- dart format .
+- flutter analyze
+- flutter test
 ```
 
-### Step 4: Show It On The Report Screen
+## HCI Review Checklist
 
-Open:
+After AI changes the app, test the experience like a user.
+
+Ask:
+
+- Can I tell what screen I am on?
+- Is the most important action easy to find?
+- Is the selected player obvious?
+- Are buttons large enough to tap quickly?
+- Can I recover from a mistake?
+- Are labels clear to someone new?
+- Does the screen still work on a small phone size?
+- Does the app avoid showing too much at once?
+- Did the change solve the original problem?
+
+Do not accept AI code just because it runs. The design still has to make sense.
+
+## Testing With People
+
+A simple usability test can take five minutes.
+
+Give someone a task:
 
 ```text
-lib/features/reports/reports_screen.dart
+Record a positive action for #7 Jordan, record a negative action for #11 Casey,
+undo the last mistake, and find the total score.
 ```
 
-Find where the summary numbers are displayed. Add the new total event count near
-the other match summary numbers.
+Do not tell them where to tap unless they are completely stuck.
 
-Use clear text, such as:
+Write down:
 
-```text
-Recorded actions
-```
+- Time to finish
+- Mistakes made
+- Questions they asked
+- Labels they misunderstood
+- One thing that worked well
+- One thing to improve
 
-### Step 5: Check Your Work
+Then decide whether your design helped.
 
-Run:
+## Basic Code Awareness
+
+You do not need to memorize the whole codebase, but you should know what kind of
+file AI is changing.
+
+Common Flutter widgets:
+
+- `Scaffold`: a full page layout
+- `AppBar`: the top bar
+- `Text`: words on the screen
+- `IconButton`: a button with an icon
+- `FilledButton`: a main action button
+- `ListView`: a scrollable list
+- `Column`: items stacked from top to bottom
+- `Row`: items arranged from left to right
+
+When AI changes a screen, open the file and look for the `build` method. That is
+where Flutter describes what the user sees.
+
+## Contribution Checklist
+
+Before sharing your work, make sure you can answer:
+
+- What user did we help?
+- What problem did we observe?
+- What design change did we make?
+- Why is this easier for the user?
+- What did we ask AI to code?
+- How did we test it?
+- What would we improve next?
+
+Then run:
 
 ```sh
 dart format .
@@ -255,87 +415,53 @@ flutter analyze
 flutter test
 ```
 
-Your contribution is ready when all three commands pass.
-
-## How To Read Flutter Code
-
-Flutter screens are built from widgets. A widget is a piece of the screen.
-
-Common widgets in this app:
-
-- `Scaffold`: a full page layout.
-- `AppBar`: the top bar.
-- `Text`: words on the screen.
-- `IconButton`: a button with an icon.
-- `FilledButton`: a main action button.
-- `ListView`: a scrollable list.
-- `Column`: items stacked from top to bottom.
-- `Row`: items arranged from left to right.
-
-When reading a screen file, start with the `build` method. That method describes
-what the user sees.
-
-## How To Ask For Help
-
-When you get stuck, write down:
-
-- What you were trying to do.
-- What file you changed.
-- What command you ran.
-- The exact error message.
-- What you expected to happen.
-
-Good help request:
-
-```text
-I added totalEventCount to MatchSummary. flutter analyze says the constructor is
-missing totalEventCount in one place. I checked match_summary.dart but I do not
-know which other file creates MatchSummary.
-```
-
-Less useful help request:
-
-```text
-It broke.
-```
-
-## Contribution Checklist
-
-Before sharing your work, check:
+Your contribution is ready when:
 
 - The app still runs.
-- The feature works when you try it.
-- The code is formatted with `dart format .`.
-- `flutter analyze` passes.
-- `flutter test` passes.
-- You can explain your change in two or three sentences.
+- The HCI problem is easier than before.
+- The code checks pass.
+- You can explain the change in two or three sentences.
 
-## Suggested Student Projects
+## Example Student Contribution
 
-Beginner:
+Title:
 
-- Make an empty state message clearer.
-- Add a helpful tooltip to an icon button.
-- Add a small summary label.
-- Add or improve one test.
+```text
+Make selected player easier to see during live scoring
+```
 
-Intermediate:
+Observation:
 
-- Add a roster search field.
-- Add a report filter for one set.
-- Add a player detail summary.
-- Improve CSV import error messages.
+```text
+Two users tapped action buttons without checking which player was selected.
+```
 
-Advanced:
+Design idea:
 
-- Add a new export field.
-- Add a new report section.
-- Add a safer confirmation step for an important action.
-- Improve storage behavior while keeping old data working.
+```text
+Show a selected-player banner directly above the action buttons on the mobile
+scoring screen.
+```
+
+AI request:
+
+```text
+Please add a compact selected-player banner to the mobile scoring screen. It
+should show jersey number, name, and current score. Keep the existing app style
+and do not change scoring logic.
+```
+
+Test:
+
+```text
+Ask three users to record actions for two different players. Watch whether they
+notice the selected player before tapping an action.
+```
 
 ## Project Rule
 
-Make one small change at a time. Run the checks. Then make the next change.
+Start with the human problem. Then design the interaction. Then ask AI to help
+with the code.
 
-Small changes are easier to understand, easier to test, and easier for teammates
-to review.
+Good software is not only about making the computer work. It is about helping
+people do their real task with less confusion and fewer mistakes.
