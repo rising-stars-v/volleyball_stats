@@ -7,16 +7,25 @@
 .atom/
 .build/
 .buildlog/
+.cxx/
+.externalNativeBuild/
+.gradle/
 .history
 .svn/
 .swiftpm/
+captures/
+local.properties
 migrate_working_dir/
+output-metadata.json
 
 # IntelliJ related
 *.iml
 *.ipr
 *.iws
 .idea/
+deploymentTargetDropDown.xml
+misc.xml
+render.experimental.xml
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
@@ -43,3 +52,15 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+*.aab
+*.apk
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
