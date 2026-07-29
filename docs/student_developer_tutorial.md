@@ -4,6 +4,9 @@ This guide is for 8th grade students who want to help improve Coach Score by
 thinking like product designers, user researchers, and human-computer
 interaction reviewers.
 
+If Flutter and the development tools are not installed yet, complete the
+[Flutter Environment Setup for Students](flutter_environment_setup.md) first.
+
 You do not need to become an expert programmer first. In this project, students
 should focus on understanding the users, finding confusing moments, designing
 better interactions, and using AI to help with the coding.

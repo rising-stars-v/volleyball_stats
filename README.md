@@ -4,6 +4,99 @@ Coach Score is an offline Flutter app for assistant coaches to record volleyball
 player actions during a match. It tracks a custom, coach-defined score called
 Coach Score. This is not an official volleyball statistic.
 
+## Student Guides
+
+- [Flutter environment setup for Windows and macOS](docs/flutter_environment_setup.md)
+- [Coach Score HCI tutorial](docs/student_developer_tutorial.md)
+
+## Student Quick Start
+
+New to Flutter or software development? Complete the
+[Flutter environment setup guide](docs/flutter_environment_setup.md) before
+continuing. It covers Windows, macOS, VS Code, the Flutter SDK, Chrome, Android,
+iOS, and common setup problems.
+
+For the first class, use Chrome. Android Studio, an Android emulator, Xcode, and
+the iOS Simulator are optional and can be configured later.
+
+### 1. Download Coach Score
+
+Open a terminal and run:
+
+```sh
+git clone https://github.com/rising-stars-v/volleyball_stats.git
+cd volleyball_stats
+```
+
+If Git says the repository cannot be found or asks you to sign in, confirm with
+your teacher that your GitHub account has access.
+
+### 2. Check Your Development Environment
+
+Run:
+
+```sh
+flutter doctor -v
+flutter devices
+```
+
+Before continuing, confirm that:
+
+- The `flutter` command works.
+- `flutter doctor -v` recognizes Flutter, Chrome, and your code editor.
+- `flutter devices` lists Chrome as a web device.
+
+Android or Xcode warnings do not block the first Chrome lesson.
+
+### 3. Install Packages and Run the App
+
+From the `volleyball_stats` project folder, run:
+
+```sh
+flutter pub get
+flutter run -d chrome
+```
+
+The first run may take several minutes. Coach Score should open in a new Chrome
+window. Keep the terminal open while the app is running.
+
+In the terminal:
+
+- Press `r` to hot reload after changing code.
+- Press `R` to restart the app.
+- Press `q` to stop the app.
+
+### 4. Try the Main Workflow
+
+After the app opens:
+
+1. Open the roster.
+2. Start or resume a match.
+3. Select a player.
+4. Record several actions.
+5. Undo one action.
+6. Open the match summary.
+
+Do not only ask, "Does it work?" Also ask, "Was it easy to use?"
+
+### 5. Verify the Project
+
+After stopping the app, run:
+
+```sh
+dart format .
+flutter analyze
+flutter test
+```
+
+The project is ready when formatting finishes, the analyzer reports no issues,
+and all tests pass. If a command fails, copy the first useful error message and
+use the setup guide's
+[troubleshooting section](docs/flutter_environment_setup.md#troubleshooting).
+
+Next, continue with the
+[Coach Score Student HCI Tutorial](docs/student_developer_tutorial.md).
+
 ## Current MVP
 
 - Roster management with active/inactive players and unique active jersey numbers.
@@ -38,19 +131,9 @@ test/               Unit and widget tests
 store/screenshots/  Draft screenshots for future store listings
 ```
 
-## Run Locally
+## Other Run and Build Commands
 
-Install dependencies:
-
-```sh
-flutter pub get
-```
-
-Run on Chrome:
-
-```sh
-flutter run -d chrome
-```
+Complete the Student Quick Start before using these platform-specific commands.
 
 Run on an iOS Simulator:
 
