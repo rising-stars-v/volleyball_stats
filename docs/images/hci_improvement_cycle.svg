@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 430" role="img" aria-labelledby="title desc">
+  <title id="title">Coach Score HCI improvement cycle</title>
+  <desc id="desc">Students observe a user, define a problem, sketch an idea, ask AI to implement a small change, review the result, test with people, and repeat.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#13796b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#143a52" flood-opacity=".15"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="430" rx="28" fill="#f4faf8"/>
+  <text x="640" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#17324d">The Coach Score HCI Improvement Cycle</text>
+
+  <g fill="none" stroke="#13796b" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M240 152H330"/>
+    <path d="M475 152H565"/>
+    <path d="M710 152H800"/>
+    <path d="M945 152H1035"/>
+    <path d="M1110 225C1110 345 815 365 695 315"/>
+    <path d="M585 315C465 365 170 345 170 225"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(170 152)">
+      <circle r="72" fill="#17324d" filter="url(#shadow)"/>
+      <text y="-7" font-size="22" font-weight="700" fill="#fff">1. Observe</text>
+      <text y="22" font-size="15" fill="#dce9ef">watch a user</text>
+    </g>
+    <g transform="translate(405 152)">
+      <circle r="72" fill="#13796b" filter="url(#shadow)"/>
+      <text y="-7" font-size="22" font-weight="700" fill="#fff">2. Define</text>
+      <text y="22" font-size="15" fill="#e0f5f0">name the problem</text>
+    </g>
+    <g transform="translate(640 152)">
+      <circle r="72" fill="#2589bd" filter="url(#shadow)"/>
+      <text y="-7" font-size="22" font-weight="700" fill="#fff">3. Sketch</text>
+      <text y="22" font-size="15" fill="#e4f4fb">draw the idea</text>
+    </g>
+    <g transform="translate(875 152)">
+      <circle r="72" fill="#7b4ab5" filter="url(#shadow)"/>
+      <text y="-7" font-size="22" font-weight="700" fill="#fff">4. Ask AI</text>
+      <text y="22" font-size="14" fill="#f1e8fa">small code change</text>
+    </g>
+    <g transform="translate(1110 152)">
+      <circle r="72" fill="#d46a1f" filter="url(#shadow)"/>
+      <text y="-7" font-size="22" font-weight="700" fill="#fff">5. Review</text>
+      <text y="22" font-size="14" fill="#fff0e1">inspect + verify</text>
+    </g>
+    <g transform="translate(640 315)">
+      <rect x="-155" y="-50" width="310" height="100" rx="22" fill="#fff" stroke="#13796b" stroke-width="4" filter="url(#shadow)"/>
+      <text y="-5" font-size="24" font-weight="700" fill="#17324d">6. Test with people</text>
+      <text y="26" font-size="17" fill="#40566b">Did it make the task easier?</text>
+    </g>
+  </g>
+
+  <text x="640" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#13796b">Use what you learn to begin the next cycle.</text>
+</svg>

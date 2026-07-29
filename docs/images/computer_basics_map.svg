@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 620" role="img" aria-labelledby="title desc">
+  <title id="title">How the computer basics fit together</title>
+  <desc id="desc">The operating system manages applications, running processes, and files stored in folders. A terminal sends commands to the operating system.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#4d7186"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#143a52" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="620" rx="28" fill="#f6fafc"/>
+  <text x="640" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#17324d">How the Computer Basics Fit Together</text>
+
+  <rect x="55" y="78" width="1170" height="485" rx="28" fill="#e9f4f2" stroke="#13796b" stroke-width="3"/>
+  <text x="85" y="118" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#13796b">COMPUTER</text>
+
+  <rect x="455" y="105" width="370" height="95" rx="20" fill="#17324d" filter="url(#shadow)"/>
+  <text x="640" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#fff">Operating System</text>
+  <text x="640" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#d9ecf4">Windows or macOS manages the computer</text>
+
+  <path d="M550 200L355 275" fill="none" stroke="#4d7186" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M640 200V275" fill="none" stroke="#4d7186" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M730 200L925 275" fill="none" stroke="#4d7186" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="95" y="285" width="330" height="205" rx="22" fill="#fff" filter="url(#shadow)"/>
+    <text x="260" y="327" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">Applications</text>
+    <rect x="130" y="352" width="82" height="52" rx="12" fill="#d8f2ec"/>
+    <rect x="219" y="352" width="82" height="52" rx="12" fill="#dbeefa"/>
+    <rect x="308" y="352" width="82" height="52" rx="12" fill="#eee2f7"/>
+    <text x="171" y="385" text-anchor="middle" font-size="16" fill="#17324d">Chrome</text>
+    <text x="260" y="385" text-anchor="middle" font-size="16" fill="#17324d">VS Code</text>
+    <text x="349" y="385" text-anchor="middle" font-size="16" fill="#17324d">Terminal</text>
+    <text x="260" y="444" text-anchor="middle" font-size="18" fill="#40566b">Programs you open and use</text>
+    <text x="260" y="470" text-anchor="middle" font-size="16" fill="#65798b">Each running app has a process</text>
+
+    <rect x="475" y="285" width="330" height="205" rx="22" fill="#fff" filter="url(#shadow)"/>
+    <text x="640" y="327" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">Processes</text>
+    <circle cx="555" cy="379" r="27" fill="#13796b"/>
+    <circle cx="640" cy="379" r="27" fill="#2589bd"/>
+    <circle cx="725" cy="379" r="27" fill="#d46a1f"/>
+    <path d="M548 379L562 379M555 372L555 386" stroke="#fff" stroke-width="3"/>
+    <path d="M633 379L647 379M640 372L640 386" stroke="#fff" stroke-width="3"/>
+    <path d="M718 379L732 379M725 372L725 386" stroke="#fff" stroke-width="3"/>
+    <text x="640" y="444" text-anchor="middle" font-size="18" fill="#40566b">Applications or commands running now</text>
+    <text x="640" y="470" text-anchor="middle" font-size="16" fill="#65798b">Stop Flutter with q when finished</text>
+
+    <rect x="855" y="285" width="330" height="205" rx="22" fill="#fff" filter="url(#shadow)"/>
+    <text x="1020" y="327" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">Files and Folders</text>
+    <path d="M910 357H954L970 374H1125V448H910Z" fill="#f2cf64" stroke="#a97900" stroke-width="2"/>
+    <text x="935" y="405" font-size="17" font-weight="700" fill="#493900">volleyball_stats/</text>
+    <text x="955" y="432" font-size="16" fill="#493900">lib/main.dart</text>
+    <text x="1020" y="476" text-anchor="middle" font-size="16" fill="#65798b">A path is their address</text>
+  </g>
+
+  <rect x="330" y="505" width="620" height="88" rx="18" fill="#fff" stroke="#86cbbf" stroke-width="3"/>
+  <text x="640" y="538" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#17324d">Terminal command</text>
+  <text x="640" y="570" text-anchor="middle" font-family="Courier New, monospace" font-size="17" fill="#13796b">asks the operating system to run a program or work with a path</text>
+</svg>
