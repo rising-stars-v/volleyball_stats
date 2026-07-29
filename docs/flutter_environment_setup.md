@@ -11,6 +11,7 @@ order and stop at each checkpoint to make sure your computer is ready.
 
 By the end of the required sections, you will:
 
+- Understand basic computer and terminal vocabulary.
 - Install Git, Visual Studio Code, Flutter, and Google Chrome.
 - Learn how to open a terminal and run a command.
 - Check your setup with `flutter doctor`.
@@ -61,6 +62,331 @@ called VS Code.
 
 The SDK and IDE are different. Installing the Flutter extension in VS Code does
 not replace installing the Flutter SDK.
+
+## Part 0: Computer Basics Before Flutter
+
+Read this section before installing anything. You will use these ideas
+throughout the tutorial.
+
+### Operating System
+
+The **operating system**, or **OS**, is the main software that controls your
+computer. It manages the screen, keyboard, files, memory, applications, and
+connected devices.
+
+This tutorial supports:
+
+- **Windows**, made by Microsoft
+- **macOS**, made by Apple
+
+Windows and macOS can run many of the same development tools, but their screens,
+keyboard shortcuts, paths, and terminal commands sometimes differ. Follow only
+the instructions marked for your operating system.
+
+How to check your operating system:
+
+- Windows: open **Start > Settings > System > About**.
+- macOS: open the **Apple menu > About This Mac**.
+
+### Applications
+
+An **application**, or **app**, is a program you can open and use. Chrome, VS
+Code, Terminal, PowerShell, and Coach Score are all applications.
+
+Applications usually have:
+
+- An icon you can click.
+- One or more windows.
+- Menus, buttons, and settings.
+- A process that runs while the application is open.
+
+Installing an application copies its required files onto your computer. Opening
+an application starts it. Closing its window usually stops it, although some
+applications continue running in the background.
+
+In this tutorial:
+
+- **Chrome** displays and tests the Flutter web app.
+- **VS Code** lets you read and edit project files.
+- **PowerShell** on Windows or **Terminal** on macOS lets you type commands.
+
+### Processes
+
+A **process** is an application or command that is currently running.
+
+For example, this command starts a Flutter process:
+
+```sh
+flutter run -d chrome
+```
+
+The process builds the app, starts a development server, opens Chrome, and waits
+for more instructions. The terminal appears busy while that process is running.
+You cannot type a new command at the normal prompt until you stop the process or
+open another terminal.
+
+For a running Flutter app:
+
+- Press `r` to hot reload it.
+- Press `R` to restart it.
+- Press `q` to stop it normally.
+
+For many other terminal processes, `Ctrl+C` asks the process to stop. Do not
+close the entire computer or delete files just because a command is taking time.
+Read the terminal message first.
+
+### Files
+
+A **file** is one saved piece of information. A file has a name and often a file
+extension after a dot.
+
+Examples from a Flutter project:
+
+```text
+README.md
+pubspec.yaml
+main.dart
+```
+
+The extension can give you a clue about the file:
+
+- `.md`: Markdown documentation
+- `.yaml`: structured configuration
+- `.dart`: Dart source code
+
+File extensions might be hidden by default. Do not add `.txt` to a code file
+unless the instructions specifically ask for a text file.
+
+### Folders and Directories
+
+A **folder** holds files and other folders. Developers often use the word
+**directory**, which means the same thing.
+
+A Flutter project is a folder containing all the files and subfolders needed
+for one app:
+
+```text
+volleyball_stats/
+  README.md
+  pubspec.yaml
+  lib/
+    main.dart
+  test/
+```
+
+Here:
+
+- `volleyball_stats` is the project folder.
+- `lib` and `test` are folders inside it.
+- `main.dart` is a file inside `lib`.
+
+When opening Coach Score in VS Code, open the entire `volleyball_stats` folder,
+not only `lib` or `main.dart`. VS Code and Flutter use `pubspec.yaml` to
+recognize the project root.
+
+### Paths
+
+A **path** is the address of a file or folder on your computer.
+
+Windows paths normally use a drive letter and backslashes:
+
+```text
+C:\Users\Jordan\projects\volleyball_stats
+C:\Users\Jordan\projects\volleyball_stats\lib\main.dart
+```
+
+macOS paths normally begin with `/` and use forward slashes:
+
+```text
+/Users/Jordan/projects/volleyball_stats
+/Users/Jordan/projects/volleyball_stats/lib/main.dart
+```
+
+An **absolute path** gives the complete address from the drive or computer root.
+The examples above are absolute paths.
+
+A **relative path** starts from your current folder. If your current folder is
+`volleyball_stats`, this relative path identifies the same Dart file:
+
+```text
+lib/main.dart
+```
+
+Useful path symbols:
+
+- `.` means the current folder.
+- `..` means the parent folder, one level up.
+- `~` on macOS means your user home folder.
+- `$HOME` in PowerShell means your Windows user home folder.
+
+Do not copy a sample path containing `Jordan` or `your-name` exactly. Replace
+that part with your own computer user name.
+
+### The Terminal and Shell
+
+A **terminal** is an application that lets you control the computer by typing
+text commands.
+
+The **shell** reads the command, runs the correct program, and prints the result.
+For this tutorial:
+
+- Windows students use **PowerShell**.
+- macOS students use the default shell inside **Terminal**.
+- VS Code can display either shell in its built-in terminal panel.
+
+Opening a terminal does not change your files by itself. A change happens only
+after you run a command that creates, edits, moves, or deletes something.
+
+You might see a prompt similar to:
+
+Windows PowerShell:
+
+```text
+PS C:\Users\Jordan\projects>
+```
+
+macOS:
+
+```text
+Jordan@MacBook projects %
+```
+
+The prompt shows that the shell is ready. Type the command after the prompt. Do
+not copy the example's `PS`, `>`, `%`, or `$` prompt symbol.
+
+### Commands and Arguments
+
+A terminal instruction usually contains a **command** followed by one or more
+**arguments**.
+
+Example:
+
+```sh
+flutter run -d chrome
+```
+
+- `flutter` is the program.
+- `run` tells Flutter what action to perform.
+- `-d` means that the next value identifies a device.
+- `chrome` is the device value.
+
+Spaces separate these pieces. Spelling, capitalization, dashes, and spaces
+matter.
+
+Run one command at a time. Read its output before continuing. A command might:
+
+- Finish successfully and return to the prompt.
+- Print a warning but still finish.
+- Print an error and stop.
+- Keep running until you stop it.
+
+### Your Current Folder
+
+Every terminal has a **current working directory**, also called the current
+folder. Commands normally act on that folder.
+
+To show your current folder:
+
+Windows PowerShell:
+
+```powershell
+Get-Location
+```
+
+macOS:
+
+```sh
+pwd
+```
+
+To list what is inside the current folder:
+
+Windows PowerShell:
+
+```powershell
+Get-ChildItem
+```
+
+macOS:
+
+```sh
+ls
+```
+
+To enter a folder on either system:
+
+```sh
+cd volleyball_stats
+```
+
+To move up one folder:
+
+```sh
+cd ..
+```
+
+Before running a Flutter project command, confirm that the current folder
+contains `pubspec.yaml`.
+
+### Practice Before Installing Flutter
+
+Open PowerShell on Windows or Terminal on macOS and complete this safe exercise.
+
+#### Windows PowerShell
+
+```powershell
+cd $HOME
+mkdir student_terminal_practice -ErrorAction SilentlyContinue
+cd student_terminal_practice
+Get-Location
+Get-ChildItem
+cd ..
+```
+
+#### macOS
+
+```sh
+cd
+mkdir -p student_terminal_practice
+cd student_terminal_practice
+pwd
+ls
+cd ..
+```
+
+What happened:
+
+1. You moved to your user home folder.
+2. You created a folder named `student_terminal_practice`.
+3. You entered that folder.
+4. You displayed its path and contents.
+5. You returned to its parent folder.
+
+You can leave the practice folder on your computer. It is empty and harmless.
+
+### Basic Safety Rules
+
+- Read a command before pressing Enter.
+- Do not run commands from an unknown person or website.
+- Do not use administrator privileges unless the tutorial or your teacher
+  explains why they are needed.
+- Do not share passwords, access tokens, or other secret values.
+- Do not delete a file or folder unless you know what it contains.
+- Stop and ask for help when a command refers to a different folder than the one
+  you expected.
+- Copy error text when asking for help, but remove private information first.
+
+### Computer Basics Checkpoint
+
+Before continuing, make sure you can explain:
+
+- Which operating system you use.
+- The difference between an application and a running process.
+- The difference between a file and a folder.
+- What a path tells you.
+- What the terminal does.
+- How to display and change your current folder.
+- Why the project folder must contain `pubspec.yaml`.
 
 ## Part 1: Choose Your Computer
 

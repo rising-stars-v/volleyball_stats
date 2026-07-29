@@ -13,8 +13,9 @@ Coach Score. This is not an official volleyball statistic.
 
 New to Flutter or software development? Complete the
 [Flutter environment setup guide](docs/flutter_environment_setup.md) before
-continuing. It covers Windows, macOS, VS Code, the Flutter SDK, Chrome, Android,
-iOS, and common setup problems.
+continuing. It begins with computer basics—operating systems, applications,
+processes, files, folders, paths, and terminal commands—then covers Windows,
+macOS, VS Code, the Flutter SDK, Chrome, Android, iOS, and common setup problems.
 
 For the first class, use Chrome. Android Studio, an Android emulator, Xcode, and
 the iOS Simulator are optional and can be configured later.
