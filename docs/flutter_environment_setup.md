@@ -22,6 +22,11 @@ Android and iOS setup are included later as optional next steps. For the first
 class, everyone should run Flutter in Chrome. This is the shortest setup path on
 both Windows and macOS.
 
+![Five-step student journey from computer basics to running Coach Score](images/flutter_setup_journey.svg)
+
+*Follow the five steps from left to right. Each checkpoint prepares you for the
+next step.*
+
 ## Before Class
 
 Make sure you have:
@@ -67,6 +72,11 @@ not replace installing the Flutter SDK.
 
 Read this section before installing anything. You will use these ideas
 throughout the tutorial.
+
+![Diagram showing the operating system managing applications, processes, files, folders, and terminal commands](images/computer_basics_map.svg)
+
+*The operating system connects the applications you use, the processes that are
+running, and the files stored on your computer.*
 
 ### Operating System
 
@@ -264,6 +274,8 @@ Example:
 ```sh
 flutter run -d chrome
 ```
+
+![Labeled terminal command showing the current folder, prompt, program, action, option, and value](images/terminal_command_anatomy.svg)
 
 - `flutter` is the program.
 - `run` tells Flutter what action to perform.

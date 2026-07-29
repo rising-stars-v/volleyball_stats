@@ -26,6 +26,14 @@ The app is used in a fast, noisy, real-world environment:
 
 That means the app is not just a coding project. It is an HCI project.
 
+| Live scoring | Match summary |
+| --- | --- |
+| <img src="../store/screenshots/ios/iphone-17/02-live-score.png" width="280" alt="Coach Score live scoring screen with player selection and large action buttons"> | <img src="../store/screenshots/ios/iphone-17/04-match-summary.png" width="280" alt="Coach Score match summary showing player score, action totals, and set totals"> |
+| Designed for fast taps during a match | Designed for reviewing results after a match |
+
+*The exact layout can look slightly different in Chrome. Notice how each screen
+supports a different user goal.*
+
 ## What Is HCI?
 
 HCI means Human-Computer Interaction. It asks questions like:
@@ -65,6 +73,10 @@ Your main job is to:
 
 AI can help write code, but AI does not automatically know what a coach needs
 during a volleyball match. That is where your HCI thinking matters.
+
+![Cycle showing students observing, defining, sketching, asking AI, reviewing, and testing with people](images/hci_improvement_cycle.svg)
+
+*HCI is a cycle. Testing teaches you what to observe and improve next.*
 
 ## Run The App
 
