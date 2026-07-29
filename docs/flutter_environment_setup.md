@@ -1173,4 +1173,6 @@ was written:
 - [Flutter installation troubleshooting](https://docs.flutter.dev/install/troubleshoot)
 
 After setup, continue with the
+[GitHub Copilot Setup for Students](github_copilot_student_setup.md) if your
+class uses AI coding tools. Then continue with the
 [Coach Score Student HCI Tutorial](student_developer_tutorial.md).

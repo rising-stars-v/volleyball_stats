@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub Copilot student setup path</title>
+  <desc id="desc">Five steps: check eligibility, apply to GitHub Education, activate Copilot Student, sign in through Visual Studio Code, and use Copilot safely by asking, reviewing, and testing.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#13796b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#143a52" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="360" rx="28" fill="#f4faf8"/>
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#17324d">Set Up Copilot for Class</text>
+  <path d="M170 178H1095" fill="none" stroke="#86cbbf" stroke-width="8" marker-end="url(#arrow)"/>
+
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(145 178)">
+      <circle r="52" fill="#17324d"/>
+      <text y="10" font-size="34" font-weight="700" fill="#fff">1</text>
+      <rect x="-105" y="75" width="210" height="90" rx="16" fill="#fff" filter="url(#shadow)"/>
+      <text y="110" font-size="21" font-weight="700" fill="#17324d">Check eligibility</text>
+      <text y="140" font-size="17" fill="#40566b">age • school • permission</text>
+    </g>
+
+    <g transform="translate(385 178)">
+      <circle r="52" fill="#13796b"/>
+      <text y="10" font-size="34" font-weight="700" fill="#fff">2</text>
+      <rect x="-105" y="75" width="210" height="90" rx="16" fill="#fff" filter="url(#shadow)"/>
+      <text y="110" font-size="21" font-weight="700" fill="#17324d">Apply</text>
+      <text y="140" font-size="17" fill="#40566b">GitHub Education</text>
+    </g>
+
+    <g transform="translate(625 178)">
+      <circle r="52" fill="#2589bd"/>
+      <text y="10" font-size="34" font-weight="700" fill="#fff">3</text>
+      <rect x="-105" y="75" width="210" height="90" rx="16" fill="#fff" filter="url(#shadow)"/>
+      <text y="110" font-size="21" font-weight="700" fill="#17324d">Activate</text>
+      <text y="140" font-size="17" fill="#40566b">Copilot Student or Free</text>
+    </g>
+
+    <g transform="translate(865 178)">
+      <circle r="52" fill="#7b4ab5"/>
+      <text y="10" font-size="34" font-weight="700" fill="#fff">4</text>
+      <rect x="-105" y="75" width="210" height="90" rx="16" fill="#fff" filter="url(#shadow)"/>
+      <text y="110" font-size="21" font-weight="700" fill="#17324d">Connect VS Code</text>
+      <text y="140" font-size="17" fill="#40566b">install • sign in • verify</text>
+    </g>
+
+    <g transform="translate(1105 178)">
+      <circle r="52" fill="#d46a1f"/>
+      <text y="10" font-size="34" font-weight="700" fill="#fff">5</text>
+      <rect x="-105" y="75" width="210" height="90" rx="16" fill="#fff" filter="url(#shadow)"/>
+      <text y="110" font-size="21" font-weight="700" fill="#17324d">Use it safely</text>
+      <text y="140" font-size="17" fill="#40566b">ask • review • test</text>
+    </g>
+  </g>
+</svg>

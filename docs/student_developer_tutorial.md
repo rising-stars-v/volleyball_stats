@@ -6,6 +6,8 @@ interaction reviewers.
 
 If Flutter and the development tools are not installed yet, complete the
 [Flutter Environment Setup for Students](flutter_environment_setup.md) first.
+If Copilot is being used in class, also complete the
+[GitHub Copilot Setup for Students](github_copilot_student_setup.md).
 
 You do not need to become an expert programmer first. In this project, students
 should focus on understanding the users, finding confusing moments, designing
@@ -277,6 +279,8 @@ Advanced ideas:
 ## Using AI For Coding
 
 AI works best when you give it a clear HCI problem, not just a vague command.
+The [GitHub Copilot Setup for Students](github_copilot_student_setup.md)
+explains account setup, VS Code modes, permissions, privacy, and change review.
 
 Weak prompt:
 

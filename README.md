@@ -7,6 +7,7 @@ Coach Score. This is not an official volleyball statistic.
 ## Student Guides
 
 - [Flutter environment setup for Windows and macOS](docs/flutter_environment_setup.md)
+- [GitHub Copilot setup for students](docs/github_copilot_student_setup.md)
 - [Coach Score HCI tutorial](docs/student_developer_tutorial.md)
 
 ## Student Quick Start
