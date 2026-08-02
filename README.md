@@ -6,17 +6,16 @@ Coach Score. This is not an official volleyball statistic.
 
 ## Student Guides
 
-- [Flutter environment setup for Windows and macOS](docs/flutter_environment_setup.md)
-- [GitHub Copilot setup for students](docs/github_copilot_student_setup.md)
-- [Coach Score HCI tutorial](docs/student_developer_tutorial.md)
+- [Start the progressive student course](docs/students/README.md)
+- [Teacher lesson plan](docs/students/teacher/lesson-plan.md)
+- [Student reference guides](docs/students/README.md#optional-and-reference-guides)
 
 ## Student Quick Start
 
-New to Flutter or software development? Complete the
-[Flutter environment setup guide](docs/flutter_environment_setup.md) before
-continuing. It begins with computer basics—operating systems, applications,
-processes, files, folders, paths, and terminal commands—then covers Windows,
-macOS, VS Code, the Flutter SDK, Chrome, Android, iOS, and common setup problems.
+New to Flutter or software development? Begin with the
+[progressive student course](docs/students/README.md). It moves from computer
+basics through Flutter, HCI observation, design, testing, and an optional
+AI-assisted contribution.
 
 For the first class, use Chrome. Android Studio, an Android emulator, Xcode, and
 the iOS Simulator are optional and can be configured later.
@@ -93,11 +92,11 @@ flutter test
 
 The project is ready when formatting finishes, the analyzer reports no issues,
 and all tests pass. If a command fails, copy the first useful error message and
-use the setup guide's
-[troubleshooting section](docs/flutter_environment_setup.md#troubleshooting).
+use the student
+[troubleshooting guide](docs/students/reference/troubleshooting.md).
 
-Next, continue with the
-[Coach Score Student HCI Tutorial](docs/student_developer_tutorial.md).
+Next, continue with
+[Lesson 6: HCI With Everyday Apps](docs/students/06-hci-with-everyday-apps.md).
 
 ## Current MVP
 

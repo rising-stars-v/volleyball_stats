@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified social feed showing HCI concepts</title>
+  <desc id="desc">An original social media feed diagram labels profile, post, like, comment, share, save, navigation, feedback, social representation, and attention design.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#143a52" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" rx="28" fill="#f6fafc"/>
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#17324d">Social Feed Example: Easy to Use — But Good for the User?</text>
+  <text x="640" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#65798b">Simplified learning diagram — not an official Instagram screenshot</text>
+
+  <rect x="90" y="100" width="505" height="560" rx="28" fill="#fff" filter="url(#shadow)"/>
+  <text x="125" y="145" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#17324d">Photo Feed</text>
+  <circle cx="535" cy="138" r="17" fill="#17324d"/>
+  <text x="535" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">1</text>
+
+  <circle cx="130" cy="190" r="25" fill="#86cbbf"/>
+  <circle cx="130" cy="184" r="8" fill="#fff"/>
+  <path d="M115 207C118 193 142 193 145 207" fill="#fff"/>
+  <text x="170" y="188" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#17324d">team_photos</text>
+  <text x="170" y="211" font-family="Arial, sans-serif" font-size="14" fill="#65798b">Community gym</text>
+
+  <rect x="110" y="230" width="465" height="260" rx="10" fill="#d9eee9"/>
+  <circle cx="343" cy="340" r="58" fill="#fff" opacity=".85"/>
+  <path d="M318 365L343 300L368 365M328 340H358" fill="none" stroke="#13796b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="343" y="463" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#40566b">Photo representation</text>
+
+  <g fill="none" stroke="#17324d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M132 525C119 510 97 529 110 546L132 566L154 546C167 529 145 510 132 525Z"/>
+    <path d="M192 521H230V551H211L197 564V551H192Z"/>
+    <path d="M263 545L305 519L292 563L279 548Z"/>
+    <path d="M531 518V562L514 552L497 562V518Z"/>
+  </g>
+  <circle cx="132" cy="583" r="17" fill="#13796b"/><text x="132" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">2</text>
+  <circle cx="211" cy="583" r="17" fill="#2589bd"/><text x="211" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">3</text>
+  <circle cx="284" cy="583" r="17" fill="#7b4ab5"/><text x="284" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">4</text>
+  <circle cx="514" cy="583" r="17" fill="#d46a1f"/><text x="514" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">5</text>
+  <text x="125" y="625" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#17324d">126 likes</text>
+
+  <g font-family="Arial, sans-serif">
+    <text x="650" y="125" font-size="23" font-weight="700" fill="#17324d">What the interface communicates</text>
+    <circle cx="675" cy="175" r="17" fill="#17324d"/><text x="675" y="182" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">1</text>
+    <text x="710" y="170" font-size="17" font-weight="700" fill="#17324d">Identity</text>
+    <text x="710" y="194" font-size="16" fill="#40566b">Avatar + name represent who posted.</text>
+
+    <circle cx="675" cy="245" r="17" fill="#13796b"/><text x="675" y="252" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">2</text>
+    <text x="710" y="240" font-size="17" font-weight="700" fill="#17324d">Like action</text>
+    <text x="710" y="264" font-size="16" fill="#40566b">A heart represents approval or interest.</text>
+
+    <circle cx="675" cy="315" r="17" fill="#2589bd"/><text x="675" y="322" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">3</text>
+    <text x="710" y="310" font-size="17" font-weight="700" fill="#17324d">Comment action</text>
+    <text x="710" y="334" font-size="16" fill="#40566b">A speech bubble represents conversation.</text>
+
+    <circle cx="675" cy="385" r="17" fill="#7b4ab5"/><text x="675" y="392" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">4</text>
+    <text x="710" y="380" font-size="17" font-weight="700" fill="#17324d">Share action</text>
+    <text x="710" y="404" font-size="16" fill="#40566b">An arrow suggests sending elsewhere.</text>
+
+    <circle cx="675" cy="455" r="17" fill="#d46a1f"/><text x="675" y="462" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">5</text>
+    <text x="710" y="450" font-size="17" font-weight="700" fill="#17324d">Save action</text>
+    <text x="710" y="474" font-size="16" fill="#40566b">A bookmark represents finding it later.</text>
+
+    <rect x="640" y="515" width="565" height="135" rx="20" fill="#fff1e6" stroke="#d46a1f" stroke-width="2"/>
+    <text x="922" y="548" text-anchor="middle" font-size="20" font-weight="700" fill="#9a4810">HCI includes well-being</text>
+    <text x="670" y="578" font-size="16" fill="#40566b">• Does the like count help the user's real goal?</text>
+    <text x="670" y="604" font-size="16" fill="#40566b">• Does endless scrolling make stopping difficult?</text>
+    <text x="670" y="630" font-size="16" fill="#40566b">• Are privacy and sharing consequences clear?</text>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 700" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified email inbox showing HCI concepts</title>
+  <desc id="desc">An original email inbox diagram labels search, compose, unread text, attachment, star, and trash representations, with explanations of their meanings.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#143a52" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="700" rx="28" fill="#f6fafc"/>
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#17324d">Email Example: What Does the Interface Represent?</text>
+  <text x="640" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#65798b">Simplified learning diagram — not an official Gmail screenshot</text>
+
+  <rect x="55" y="100" width="800" height="535" rx="22" fill="#fff" filter="url(#shadow)"/>
+  <rect x="55" y="100" width="800" height="78" rx="22" fill="#edf3f7"/>
+  <rect x="245" y="119" width="420" height="42" rx="18" fill="#fff" stroke="#a8bbc7" stroke-width="2"/>
+  <circle cx="274" cy="140" r="9" fill="none" stroke="#40566b" stroke-width="3"/>
+  <path d="M281 147L291 157" stroke="#40566b" stroke-width="3"/>
+  <text x="310" y="147" font-family="Arial, sans-serif" font-size="16" fill="#65798b">Search mail</text>
+  <circle cx="664" cy="121" r="17" fill="#17324d"/>
+  <text x="664" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">1</text>
+
+  <rect x="75" y="198" width="150" height="54" rx="18" fill="#d8f2ec" stroke="#13796b" stroke-width="2"/>
+  <text x="150" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#17324d">+ Compose</text>
+  <circle cx="220" cy="197" r="17" fill="#13796b"/>
+  <text x="220" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">2</text>
+  <g font-family="Arial, sans-serif" font-size="17" fill="#40566b">
+    <text x="95" y="290">Inbox</text><text x="198" y="290" text-anchor="end" font-weight="700">4</text>
+    <text x="95" y="330">Starred</text>
+    <text x="95" y="370">Sent</text>
+    <text x="95" y="410">Trash</text>
+  </g>
+
+  <line x1="245" y1="198" x2="830" y2="198" stroke="#d5e0e6" stroke-width="2"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="245" y="199" width="585" height="86" fill="#eaf5fb"/>
+    <text x="275" y="232" font-size="17" font-weight="700" fill="#17324d">Teacher</text>
+    <text x="405" y="232" font-size="17" font-weight="700" fill="#17324d">Field trip details</text>
+    <text x="405" y="259" font-size="15" fill="#40566b">Please return the form by Friday...</text>
+    <path d="M690 227C680 216 664 230 674 240L690 256L706 240C716 230 700 216 690 227Z" fill="none" stroke="#a97900" stroke-width="3"/>
+    <path d="M751 230L751 252M742 230V248C742 263 765 263 765 248V224C765 207 737 207 737 228V251" fill="none" stroke="#40566b" stroke-width="3"/>
+    <path d="M798 224H820M802 229L806 258H816L820 229M808 218H814" fill="none" stroke="#40566b" stroke-width="3"/>
+
+    <rect x="245" y="286" width="585" height="86" fill="#fff"/>
+    <text x="275" y="319" font-size="17" fill="#40566b">Coach</text>
+    <text x="405" y="319" font-size="17" fill="#40566b">Practice reminder</text>
+    <text x="405" y="346" font-size="15" fill="#65798b">Practice starts at 5:00...</text>
+
+    <rect x="245" y="373" width="585" height="86" fill="#fff"/>
+    <text x="275" y="406" font-size="17" fill="#40566b">Library</text>
+    <text x="405" y="406" font-size="17" fill="#40566b">Book is ready</text>
+    <text x="405" y="433" font-size="15" fill="#65798b">Your requested book is available...</text>
+  </g>
+
+  <g font-family="Arial, sans-serif" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">
+    <circle cx="392" cy="198" r="17" fill="#2589bd"/><text x="392" y="205">3</text>
+    <circle cx="750" cy="268" r="17" fill="#7b4ab5"/><text x="750" y="275">4</text>
+    <circle cx="690" cy="268" r="17" fill="#d46a1f"/><text x="690" y="275">5</text>
+    <circle cx="810" cy="268" r="17" fill="#a93b55"/><text x="810" y="275">6</text>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <text x="900" y="130" font-size="23" font-weight="700" fill="#17324d">Representation key</text>
+    <circle cx="920" cy="175" r="17" fill="#17324d"/><text x="920" y="182" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">1</text>
+    <text x="950" y="181" font-size="17" fill="#40566b">Magnifier means search</text>
+    <circle cx="920" cy="230" r="17" fill="#13796b"/><text x="920" y="237" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">2</text>
+    <text x="950" y="236" font-size="17" fill="#40566b">Compose starts a message</text>
+    <circle cx="920" cy="285" r="17" fill="#2589bd"/><text x="920" y="292" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">3</text>
+    <text x="950" y="281" font-size="17" fill="#40566b">Bold + tinted row means</text>
+    <text x="950" y="304" font-size="17" fill="#40566b">unread or important now</text>
+    <circle cx="920" cy="350" r="17" fill="#7b4ab5"/><text x="920" y="357" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">4</text>
+    <text x="950" y="356" font-size="17" fill="#40566b">Paperclip means attachment</text>
+    <circle cx="920" cy="405" r="17" fill="#d46a1f"/><text x="920" y="412" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">5</text>
+    <text x="950" y="411" font-size="17" fill="#40566b">Star marks for later</text>
+    <circle cx="920" cy="460" r="17" fill="#a93b55"/><text x="920" y="467" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">6</text>
+    <text x="950" y="466" font-size="17" fill="#40566b">Trash represents delete</text>
+    <rect x="890" y="510" width="335" height="112" rx="18" fill="#e9f4f2"/>
+    <text x="1057" y="543" text-anchor="middle" font-size="19" font-weight="700" fill="#13796b">HCI question</text>
+    <text x="1057" y="574" text-anchor="middle" font-size="16" fill="#40566b">Would a first-time user know</text>
+    <text x="1057" y="598" text-anchor="middle" font-size="16" fill="#40566b">what each symbol will do?</text>
+  </g>
+</svg>
