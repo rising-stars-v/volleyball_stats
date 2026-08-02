@@ -1,36 +1,78 @@
 # Lesson 10: Your First AI-Assisted Change
 
-## Goal
+**Time:** 75–90 minutes
 
-Implement one small, evidence-based HCI improvement. You remain responsible for
-the design decision, code review, testing, and final explanation.
+**Goal:** Implement one small, evidence-based HCI improvement while keeping the
+student and teacher in control of planning, edits, commands, review, and tests.
 
-## Prepare the Request
+**Before starting:** Complete Lessons 7–9 and obtain teacher approval for the
+Lesson 8 design decision. Students not using AI can follow the same gates with
+a teacher or student developer implementing the approved design.
 
-Collect these items from Lessons 7 and 8:
+## Lesson Plan
 
-- User and context
+| Time | Activity |
+| ---: | --- |
+| 0–10 min | Gather evidence and confirm a clean starting point |
+| 10–20 min | Write a constrained implementation request |
+| 20–30 min | Review the AI plan without allowing edits |
+| 30–45 min | Approve and implement one small change |
+| 45–55 min | Review every changed file and reject extra scope |
+| 55–65 min | Format changed files, analyze, and test |
+| 65–77 min | Repeat the usability scenario with a person |
+| 77–90 min | Write the contribution note and complete the checkpoint |
+
+## Four Required Gates
+
+The work cannot skip these gates:
+
+```text
+1. Evidence and design
+        ↓ teacher reviews
+2. Read-only implementation plan
+        ↓ student and teacher approve
+3. Small file change
+        ↓ student reviews the diff
+4. Automated and human testing
+```
+
+Passing a code test does not replace testing the interaction with a person.
+
+## Gate 1: Prepare the Evidence — 10 Minutes
+
+Collect:
+
+- User and context from Lesson 7
 - Observed usability problem
 - Target task and screen
-- Tested design idea
-- Success condition
+- Tested paper design from Lesson 8
+- Measurable success condition
 - Existing behavior that must remain
 
-## Write a Constrained Prompt
+From the `volleyball_stats` folder, run this read-only command:
 
-Use this template:
+```sh
+git status --short
+```
+
+If it displays changes that existed before this lesson, stop and ask the
+teacher. Do not delete, discard, overwrite, or reset someone else's work.
+
+## Gate 2: Request and Review a Plan — 20 Minutes
+
+Use this prompt template:
 
 ```text
 User and context:
 Observed problem:
 Target screen or workflow:
-Requested interaction:
-Constraints and behavior to preserve:
+Tested design:
+Behavior to preserve:
 Acceptance criteria:
 
-First inspect the relevant files and explain a small plan. Do not edit until I
-review the plan. Change only the files needed for this interaction. Add or
-update a focused test. Show the diff for review.
+First inspect the relevant files and explain a small implementation plan.
+Do not edit files or run commands. Name the files you expect to change, the
+test you expect to update, and any assumptions or risks.
 ```
 
 Example:
@@ -39,69 +81,128 @@ Example:
 During a usability test, students were unsure which player was selected before
 recording an action. On the live scoring screen, make the selected player easier
 to recognize without relying only on color. Preserve the current scoring and
-selection behavior. First explain a small plan. After approval, make the focused
-change, update a widget test, and show the diff.
+selection behavior. Success means a participant can identify the selected
+player without help. First provide a read-only plan and name the expected files
+and focused widget test.
 ```
 
-## Review Before Accepting
+Review the plan with the teacher:
 
-For every changed file, ask:
+- Does it address the observed problem?
+- Does it match the tested paper design?
+- Does it change only one screen or short workflow?
+- Does it preserve scoring, data, navigation, and recovery behavior?
+- Are the proposed files related to the task?
+- Is the acceptance criterion observable?
 
-- Is this file related to the approved design?
+Revise the plan before allowing edits if any answer is no or uncertain.
+
+## Gate 3: Implement One Small Change — 15 Minutes
+
+After the teacher approves the plan, tell the assistant:
+
+```text
+Proceed with only the approved change. Keep Default Approvals enabled. Ask
+before running commands. Do not add packages, change permissions, publish,
+deploy, commit, or push. Add or update only the focused test from the plan, then
+show every changed file as a diff.
+```
+
+Read every approval request. Confirm that the command and file belong to the
+approved plan. Do not approve a broad or unexplained action merely because the
+assistant recommends it.
+
+## Review the Diff — 10 Minutes
+
+Open VS Code's **Source Control** view. Select every changed file to see the
+before-and-after diff.
+
+For each file, ask:
+
+- Why did this file need to change?
+- Can I explain the important changed lines?
 - Did the change preserve current behavior?
-- Are names and labels understandable?
 - Does the design work without relying only on color?
 - Is useful feedback visible?
 - Can a mistaken action be recovered?
-- Did the AI add packages, permissions, or unrelated changes?
+- Did the assistant add packages, permissions, secrets, or unrelated changes?
 
-Reject or revise changes that exceed the agreed scope.
+Reject extra scope. If you are unsure how to undo an AI edit safely, stop and
+ask the teacher; do not run `git reset`, delete files, or blindly accept all.
 
-## Run Project Checks
+Run `git status --short` again and compare the file list with the approved plan.
 
-From the `volleyball_stats` folder:
+## Gate 4A: Automated Checks — 10 Minutes
+
+Format only the changed Dart files. Replace the example path with each real
+file reported by the diff:
 
 ```sh
-dart format .
+dart format lib/path/to/changed_file.dart
+```
+
+Do not type `path/to/changed_file.dart` literally. Then run:
+
+```sh
 flutter analyze
 flutter test
 ```
 
-Then run the app:
+Record the result of each command. If a check fails, capture the first useful
+error and investigate it. Do not weaken or remove a test simply to make the
+check green.
+
+## Gate 4B: Human Check — 12 Minutes
+
+Run the app:
 
 ```sh
 flutter run -d chrome
 ```
 
-Repeat the Lesson 7 scenario. Compare the result with your measurable success
-condition. Passing automated tests does not prove that the interaction helps a
-person.
+Ask a participant to repeat the Lesson 7 scenario. Do not teach the new
+interface while measuring it. Compare the result with the Lesson 8 success
+condition:
 
-## Prepare a Contribution Note
+| Evidence | Before | After |
+| --- | --- | --- |
+| Pause, error, or question being studied |  |  |
+| Did the participant complete the task without help? |  |  |
+| Did feedback communicate what happened? |  |  |
+| New difficulty observed |  |  |
+
+One successful participant is encouraging evidence, not proof that the design
+works for everyone.
+
+Press `q` to stop the app.
+
+## Prepare the Contribution Note — 8–13 Minutes
 
 ```text
 User and context:
 Observed problem:
-Design change:
-Evidence from the paper test:
+Paper design and test evidence:
+Implemented change:
 Files changed:
-Automated checks:
-Manual usability result:
+Automated-check results:
+Before-and-after usability result:
+Behavior preserved:
 Remaining concern or next question:
 ```
 
-Do not commit or publish until your teacher reviews the diff and contribution
-note.
+Do not commit, push, publish, or deploy until the teacher reviews the diff,
+test results, and contribution note.
 
 ## Final Checkpoint
 
 - [ ] The change addresses an observed user problem.
-- [ ] The scope stayed small.
-- [ ] I reviewed every changed line.
+- [ ] The teacher approved the plan before edits began.
+- [ ] The scope stayed small and no unrelated files changed.
+- [ ] I reviewed and can explain every changed file.
 - [ ] Formatting, analysis, and tests passed—or I documented the exact failure.
 - [ ] A person tested the updated interaction.
-- [ ] I can explain the change without saying only “AI made it.”
+- [ ] I compared the result with a measurable success condition.
+- [ ] I can explain my contribution without saying only “AI made it.”
 
 You have completed the beginner learning path. Continue improving the design by
 repeating observe → define → sketch → test → implement → review.
-

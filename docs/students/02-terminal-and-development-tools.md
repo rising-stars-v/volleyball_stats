@@ -1,116 +1,210 @@
 # Lesson 2: Terminal and Development Tools
 
-## Why This Matters
+**Time:** 30 minutes
 
-Developers use several applications together. The terminal provides a text
-interface for giving commands, while VS Code provides a visual interface for
-reading and changing project files.
+**Goal:** Use a terminal to find and read the text file created in Lesson 1.
+
+**Before starting:** Confirm that `my-first-file.txt` exists in Documents. If
+it does not, complete the file activity in [Lesson 1](01-computer-basics.md).
+
+## Lesson Plan
+
+| Time | Activity |
+| ---: | --- |
+| 0–3 min | Compare visual and text interfaces |
+| 3–8 min | Learn five terminal words |
+| 8–10 min | Open PowerShell or Terminal |
+| 10–17 min | Navigate to Documents and list its files |
+| 17–21 min | Read `my-first-file.txt` safely |
+| 21–25 min | Compare the terminal with Finder/File Explorer |
+| 25–28 min | Preview development tools and review safety |
+| 28–30 min | Exit checkpoint |
 
 ## What You Will Learn
 
-- Understand terminal, shell, command, argument, and current folder.
-- Recognize the role of VS Code, Git, Flutter, and Chrome.
-- Run safe read-only commands.
-- Stop and ask before running risky commands.
+- Explain terminal, shell, command, argument, and current folder.
+- Navigate to Documents using text commands.
+- List files and read a text file without changing it.
+- Recognize the jobs of VS Code, Git, Flutter, and Chrome.
+- Stop before running unsafe or unexplained commands.
 
-## Your Development Tools
+## Visual Interface and Text Interface — 3 Minutes
 
-| Tool | Its job |
+In Lesson 1, you used Finder or File Explorer. You selected folders and files
+through a **visual interface**.
+
+A terminal is a **text interface**. Instead of selecting a folder icon, you
+type a command such as `cd Documents`. Both interfaces ask the operating system
+to work with the same folders and files.
+
+| Visual interface | Text interface |
 | --- | --- |
-| **Terminal** | Displays a prompt and the results of commands |
-| **Shell** | Reads commands and asks the operating system to run them |
-| **VS Code** | Edits project files and provides development tools |
-| **Git** | Downloads projects and tracks versions of files |
-| **Flutter SDK** | Creates, runs, checks, and builds Flutter applications |
-| **Chrome** | Runs the web version of Coach Score |
+| Select a folder icon | Enter a command to change folders |
+| See files as icons or rows | Enter a command to list files |
+| Double-click a text file | Enter a command to display its text |
 
-![A terminal command divided into command, subcommand, option, and value](../images/terminal_command_anatomy.svg)
+## Five Terminal Words — 5 Minutes
 
-In this command, `flutter` names the program, `run` names the requested work,
-and `-d chrome` selects the target device:
+| Word | Meaning |
+| --- | --- |
+| **Terminal** | The window that displays a prompt, commands, and results |
+| **Shell** | The program that reads a command and asks the operating system to run it |
+| **Command** | A text instruction, such as `cd` or `ls` |
+| **Argument** | Information supplied to a command, such as the folder name in `cd Documents` |
+| **Current folder** | The folder where the next command will run |
 
-```sh
-flutter run -d chrome
-```
+![A simple terminal line divided into current folder, prompt, command, and argument](../images/terminal_simple_command.svg)
 
-## Open a Terminal
+Do not type the prompt symbol shown in examples. Type only the command that
+comes after it.
 
-On Windows, open **PowerShell**. On macOS, open **Terminal**.
+## Open the Terminal — 2 Minutes
 
-Run a command that only reports your current location:
+### Windows
 
-Windows PowerShell:
+1. Open the **Start** menu.
+2. Search for `PowerShell`.
+3. Open **Windows PowerShell** or **PowerShell**.
+
+### macOS
+
+1. Open Spotlight with **Command+Space**.
+2. Search for `Terminal`.
+3. Open **Terminal**.
+
+The terminal displays a prompt when it is ready for a command.
+
+## Activity: Find the Text File — 7 Minutes
+
+Choose the commands for your operating system. Enter one command at a time and
+look at the result before continuing.
+
+### Windows PowerShell
+
+Show the current folder:
 
 ```powershell
 Get-Location
 ```
 
-macOS:
+Go to Documents:
 
-```sh
-pwd
+```powershell
+cd "$HOME\Documents"
 ```
 
-List the current folder's contents:
-
-Windows PowerShell:
+List the folder's contents:
 
 ```powershell
 Get-ChildItem
 ```
 
-macOS:
+Look for `my-first-file.txt` in the result.
+
+If PowerShell says the Documents path does not exist, open Documents in File
+Explorer, select its address bar, copy the path, and enter:
+
+```powershell
+cd "paste-the-copied-path-here"
+```
+
+### macOS Terminal
+
+Show the current folder:
+
+```sh
+pwd
+```
+
+Go to Documents:
+
+```sh
+cd ~/Documents
+```
+
+List the folder's contents:
 
 ```sh
 ls
 ```
 
-## Change Folders Safely
+Look for `my-first-file.txt` in the result.
 
-The `cd` command means **change directory**. A directory is another word for a
-folder.
+## Activity: Read the File — 4 Minutes
 
-```sh
-cd Documents
+These commands display the file without editing or deleting it.
+
+Windows PowerShell:
+
+```powershell
+Get-Content .\my-first-file.txt
 ```
 
-Return to the parent folder:
+macOS Terminal:
 
 ```sh
-cd ..
+cat my-first-file.txt
 ```
 
-Paths containing spaces must be quoted:
+The terminal should display:
 
-```sh
-cd "Student Projects"
+```text
+This is my first text file.
 ```
 
-## Safety Rules
+What happened?
 
-- Read the full command before pressing Enter.
-- Confirm the current folder before running a project command.
+1. The shell read your command.
+2. The current folder told it where to look.
+3. The filename was an argument telling the command which file to read.
+4. The terminal displayed the result as feedback.
+
+If the file is not found, do not create random copies. Check the current folder
+and filename first.
+
+## Exercise: Compare the Interfaces — 4 Minutes
+
+Complete this with a partner:
+
+| Task | Finder or File Explorer | Terminal |
+| --- | --- | --- |
+| Open Documents | Select the Documents folder | `cd` to Documents |
+| See its files | Look at icons or rows | `ls` or `Get-ChildItem` |
+| Read the text file | Double-click it | `cat` or `Get-Content` |
+| Know the current folder | Read the window or address bar | `pwd` or `Get-Location` |
+
+Discuss: which interface gives a beginner clearer feedback? Which might become
+faster for repeated work? Neither answer has to be the same for every person.
+
+## Development Tools and Safety — 3 Minutes
+
+You do not need to run these tools yet. Lesson 3 will install them.
+
+| Tool | Its future job |
+| --- | --- |
+| **VS Code** | Read and edit project files |
+| **Git** | Download a project and track versions |
+| **Flutter SDK** | Create, run, check, and build Flutter applications |
+| **Chrome** | Run the web version of Coach Score |
+
+Safety rules:
+
+- Read the entire command before pressing Enter.
+- Confirm the current folder before running a command.
 - Do not paste commands that request passwords, tokens, or private information.
-- Stop before commands containing delete, remove, publish, deploy, or payment steps.
-- A terminal error is information. Read it before trying random commands.
+- Stop before commands involving delete, remove, publish, deploy, or payment.
+- An error is information. Read it before trying another command.
 
-## Checkpoint
+## Exit Checkpoint — 2 Minutes
 
 Show your teacher or partner that you can:
 
-1. Open the terminal.
-2. Display the current folder.
-3. List its contents.
-4. Enter one known folder.
-5. Return to the parent folder.
-
-## Think Like an HCI Designer
-
-The terminal and Finder/File Explorer can both navigate folders, but they use
-different representations and actions. Which interface gives a beginner more
-feedback? Which is faster for repeated work?
+1. Display the current folder.
+2. Navigate to Documents.
+3. List the files and find `my-first-file.txt`.
+4. Display the sentence stored inside it.
+5. Explain which part was a command and which part was an argument.
 
 ## What Comes Next
 
-Continue to [Lesson 3: Install Flutter](03-flutter-setup/README.md).
-
+Continue to [Lesson 3: Install Flutter](03-install-flutter.md).

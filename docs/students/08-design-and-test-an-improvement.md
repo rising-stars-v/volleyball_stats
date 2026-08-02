@@ -1,5 +1,24 @@
 # Lesson 8: Design and Test an Improvement
 
+**Time:** 50 minutes
+
+**Goal:** Turn one observed usability problem into two paper designs, test one,
+and choose a measurable next step.
+
+**Materials:** Lesson 7 problem statement, blank paper, pencil, and optional
+colored markers. Artistic skill is not being graded.
+
+## Lesson Plan
+
+| Time | Activity |
+| ---: | --- |
+| 0–5 min | Review the observation and problem statement |
+| 5–17 min | Sketch two different ideas |
+| 17–25 min | Label actions, representations, feedback, and recovery |
+| 25–35 min | Test one paper interaction with a partner |
+| 35–44 min | Revise the design using evidence |
+| 44–50 min | Write the decision statement and checkpoint |
+
 ## Why This Matters
 
 A paper sketch is faster and safer to change than code. You can compare ideas
@@ -27,6 +46,7 @@ For each idea, draw:
 - Representations such as labels, icons, colors, and highlights.
 - Feedback shown after the action.
 - A recovery option for a likely mistake.
+- At least two states: before the action and after the feedback appears.
 
 Do not worry about artistic quality. Boxes, arrows, and readable labels are
 enough.
@@ -51,6 +71,9 @@ Complete this for each sketch:
 Give a partner the same scenario used in Lesson 7. Place your sketch in front
 of them. When they point to a control, act like the computer by showing or
 drawing the next state.
+
+Read only the task. Do not explain the buttons, symbols, or intended solution
+before the partner tries it.
 
 Do not defend the design while they test it. Record:
 
@@ -78,6 +101,7 @@ correct understanding without help. “Looks better” is difficult to test.
 
 - [ ] I drew two possible designs.
 - [ ] Both designs include feedback and error recovery.
+- [ ] My tested design shows before and after states.
 - [ ] Another person attempted a task with one design.
 - [ ] I changed or selected an idea using observation evidence.
 - [ ] I wrote one measurable success condition.
@@ -85,4 +109,3 @@ correct understanding without help. “Looks better” is difficult to test.
 If your class is not using AI, your teacher may assign a manual implementation
 or another design iteration. If your class is using Copilot, continue to
 [Lesson 9: Copilot Setup and Safety](09-copilot-setup-and-safety.md).
-

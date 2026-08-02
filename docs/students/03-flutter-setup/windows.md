@@ -3,47 +3,60 @@
 Ask a teacher, parent, guardian, or school IT team before installing software
 on a managed computer.
 
-## Install the Tools
+## 1. Install Chrome
 
-1. Install [Google Chrome](https://www.google.com/chrome/).
-2. Install [Git for Windows](https://git-scm.com/download/win).
-3. Install [Visual Studio Code](https://code.visualstudio.com/).
-4. Open VS Code and select **Extensions** from the left side.
-5. Search for `Flutter` and install the extension published by **Dart Code**.
-   The Dart extension is installed with it.
-6. Open the VS Code Command Palette with **Ctrl+Shift+P**.
-7. Run **Flutter: New Project**.
-8. When asked for the Flutter SDK, select **Download SDK**.
-9. Choose a simple location you can find again. Avoid a protected system folder
-   and avoid spaces or special characters in the Flutter SDK path.
-10. Allow VS Code to add Flutter to `PATH` when offered.
-11. Close and reopen VS Code and PowerShell.
+1. Download [Google Chrome](https://www.google.com/chrome/).
+2. Open the installer and follow its instructions.
+3. Open Chrome once, then close it.
 
-## Verify the Installation
+Chrome will be the first Flutter target device.
 
-In a new PowerShell window, run:
+## 2. Install Git
 
-```powershell
-git --version
-code --version
-flutter --version
-flutter doctor -v
-flutter devices
-```
+1. Download [Git for Windows](https://git-scm.com/download/win).
+2. Open the installer.
+3. Keep the recommended options unless your teacher or school IT says otherwise.
+4. Finish the installation.
 
-Chrome should appear as a device. Android warnings are acceptable for now.
+Git will later download Coach Score and track project versions.
 
-## If Something Goes Wrong
+## 3. Install Visual Studio Code
 
-- If `flutter` is not recognized, restart VS Code and PowerShell first.
-- If Chrome is missing, open Chrome once and run `flutter devices` again.
-- On a school computer, ask IT rather than bypassing installation restrictions.
-- Use the [troubleshooting guide](../reference/troubleshooting.md) for more help.
+1. Download [Visual Studio Code](https://code.visualstudio.com/).
+2. Open the installer.
+3. Keep **Add to PATH** enabled when the installer offers it.
+4. Finish the installation and open VS Code.
 
-## Checkpoint
+Adding VS Code to `PATH` lets the terminal find the `code` command.
 
-Show your teacher the Flutter, VS Code, and Chrome sections of
-`flutter doctor -v`. Do not share usernames or unrelated paths in public posts.
+## 4. Install the Flutter Extension and SDK
 
-Return to the [Lesson 3 shared checkpoint](README.md#shared-checkpoint).
+1. Select **Extensions** on the left side of VS Code.
+2. Search for `Flutter`.
+3. Install **Flutter**, published by **Dart Code**. Its Dart extension is
+   installed automatically.
+4. Open the Command Palette with **Ctrl+Shift+P**.
+5. Run **Flutter: New Project**.
+6. When VS Code asks for the Flutter SDK, select **Download SDK**.
+7. Choose a folder you can find again. Avoid protected system folders, spaces,
+   and special characters in the SDK path.
+8. Allow VS Code to add the SDK to `PATH` when offered.
+9. When the SDK download and PATH setup finish, cancel the new-project flow.
+   Lesson 4 creates the class project in the correct location.
+
+The extension helps VS Code understand Flutter projects. The SDK contains the
+actual Flutter commands and libraries.
+
+## 5. Restart the Applications
+
+Close all VS Code and PowerShell windows. Reopen VS Code and PowerShell so they
+receive the updated `PATH`.
+
+Return to [Lesson 3 Shared Verification](../03-install-flutter.md#shared-verification).
+
+## If Installation Is Blocked
+
+Do not bypass school controls. Record which installer or step was blocked and
+ask school IT or your teacher for help. See the
+[troubleshooting guide](../reference/troubleshooting.md).
 

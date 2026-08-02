@@ -19,16 +19,16 @@ first day. Chrome is the simplest place to run Coach Score.
 
 | Lesson | What you will accomplish | Suggested time |
 | --- | --- | ---: |
-| [1. Computer Basics](01-computer-basics.md) | Understand applications, processes, files, folders, and paths | 30–45 min |
-| [2. Terminal and Development Tools](02-terminal-and-development-tools.md) | Navigate safely and understand VS Code, Git, Flutter, and the terminal | 30–45 min |
-| [3. Install Flutter](03-flutter-setup/README.md) | Prepare a Windows or macOS computer | 45–90 min |
-| [4. Build Your First Flutter App](04-build-your-first-flutter-app.md) | Create Hello World and try hot reload | 45 min |
-| [5. Run Coach Score](05-run-coach-score.md) | Download, run, and explore this project | 30 min |
-| [6. HCI With Everyday Apps](06-hci-with-everyday-apps.md) | Learn interface, representation, goal, task, action, and feedback | 45–60 min |
+| [1. Computer Basics](01-computer-basics.md) | Understand applications, processes, files, folders, and paths | 30 min |
+| [2. Terminal and Development Tools](02-terminal-and-development-tools.md) | Navigate safely and understand VS Code, Git, Flutter, and the terminal | 30 min |
+| [3. Install Flutter](03-install-flutter.md) | Prepare a Windows or macOS computer | 45–90 min |
+| [4. Build Your First Flutter App](04-build-your-first-flutter-app.md) | Create Hello World and try hot reload | 60 min |
+| [5. Run Coach Score](05-run-coach-score.md) | Download, run, and explore this project | 45 min |
+| [6. HCI With Everyday Apps](06-hci-with-everyday-apps.md) | Learn interface, representation, goal, task, action, and feedback | 60 min |
 | [7. Observe Coach Score](07-observe-coach-score.md) | Collect evidence from a user instead of guessing | 45 min |
-| [8. Design and Test an Improvement](08-design-and-test-an-improvement.md) | Sketch an idea and test it before coding | 45–60 min |
-| [9. Copilot Setup and Safety](09-copilot-setup-and-safety.md) | Configure an optional AI assistant safely | 30–45 min |
-| [10. First AI-Assisted Change](10-first-ai-assisted-change.md) | Make, review, and test one small contribution | 60–90 min |
+| [8. Design and Test an Improvement](08-design-and-test-an-improvement.md) | Sketch an idea and test it before coding | 50 min |
+| [9. Copilot Setup and Safety](09-copilot-setup-and-safety.md) | Configure an optional AI assistant safely | 40 min |
+| [10. First AI-Assisted Change](10-first-ai-assisted-change.md) | Make, review, and test one small contribution | 75–90 min |
 
 ## Your Progress
 
@@ -48,6 +48,7 @@ first day. Chrome is the simplest place to run Coach Score.
 Use these only when you need them:
 
 - [Student glossary](reference/glossary.md)
+- [Computer basics extra practice](reference/computer-basics-extra-practice.md)
 - [Advanced HCI concepts](reference/advanced-hci-concepts.md)
 - [Android emulator setup](reference/android-emulator.md)
 - [iOS Simulator setup](reference/ios-simulator.md)

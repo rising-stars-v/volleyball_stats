@@ -1,5 +1,10 @@
 # Lesson 6: HCI Basics Through Everyday Apps
 
+**Time:** 60 minutes
+
+**Goal:** Use familiar email and social-photo examples to understand the HCI
+language needed to study Coach Score.
+
 This beginner tutorial uses familiar email and social-photo apps to explain
 Human-Computer Interaction (HCI). We will use Gmail and Instagram as examples,
 but the ideas apply to almost every app—including Coach Score.
@@ -11,6 +16,22 @@ messages, contact information, passwords, or personal photos.
 > **About the examples:** Gmail and Instagram are named only as familiar
 > examples. The diagrams below are original, simplified learning diagrams—not
 > official screenshots. Real interfaces change over time.
+
+## Lesson Plan
+
+| Time | Activity |
+| ---: | --- |
+| 0–8 min | Introduce the email story and HCI loop |
+| 8–18 min | Application, interface, and representation |
+| 18–28 min | Goal, task, process, and action |
+| 28–38 min | Feedback, state, errors, and recovery |
+| 38–48 min | Social-photo example and well-being discussion |
+| 48–57 min | Apply the vocabulary to Coach Score |
+| 57–60 min | Quick check and exit checkpoint |
+
+For a 60-minute class, complete the numbered activities as short partner or
+group discussions. Students may write only one strong answer when an activity
+offers several prompts. Use the remaining prompts as optional extra practice.
 
 ## What You Will Learn
 
@@ -162,7 +183,8 @@ when they are rushed or learning.
 
 ### Activity 3: Find the Recovery Path
 
-For each problem, describe helpful feedback and a recovery action:
+Choose **one** problem and describe helpful feedback and a recovery action.
+Early finishers may discuss the others:
 
 1. Maya selects the wrong person suggested by autocomplete.
 2. Maya writes “I attached my work” but forgets the file.
@@ -188,7 +210,8 @@ changed heart is feedback.
 
 ### Activity 4: Complete the HCI Map
 
-Copy and complete this table for Leo's story:
+Complete the Goal, Interface, Action, Representation, and Feedback rows during
+class. Finish the other rows only if time permits:
 
 | HCI idea | Your answer |
 | --- | --- |
@@ -247,7 +270,8 @@ Coach Score uses the same HCI building blocks:
 
 ### Activity 5: Compare the Applications
 
-Choose one representation or interaction from each application:
+As a class, choose one representation or interaction from each application.
+Complete at least the first three rows; the remaining rows are extra practice:
 
 | Question | Email | Social feed | Coach Score |
 | --- | --- | --- | --- |

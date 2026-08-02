@@ -16,12 +16,13 @@ AI-assisted coding appears only after students identify and test a human need.
 | --- | --- | --- |
 | 1 | 1–2 | Computer vocabulary and terminal checkpoint |
 | 2 | 3 | Verified Flutter environment |
-| 3 | 4–5 | Running Hello World and Coach Score |
-| 4 | 6 | Everyday-app HCI map |
-| 5 | 7 | Observation sheet and problem statement |
-| 6 | 8 | Tested paper prototype |
-| 7 | 9 | Safe AI explanation and plan |
-| 8–9 | 10 | Reviewed small change and contribution note |
+| 3 | 4 | Running Hello World and one hot-reload change |
+| 4 | 5 | Running Coach Score and first-impression notes |
+| 5 | 6 | Everyday-app HCI map |
+| 6 | 7 | Observation sheet and problem statement |
+| 7 | 8 | Tested paper prototype |
+| 8 | 9 | Safe AI explanation and read-only plan |
+| 9–10 | 10 | Reviewed small change and contribution note |
 
 ## Facilitation Rules
 
@@ -50,4 +51,3 @@ Collect one artifact from each stage:
 
 Sample HCI answers are available inside the expandable answer section of
 [Lesson 6](../06-hci-with-everyday-apps.md#quick-check).
-
